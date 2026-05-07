@@ -315,7 +315,7 @@ Most questions land on multiple sessions. Open the **first** listed file unless 
 
 ---
 
-## Bootcamp meta-context (useful for Runneth's tone)
+## Bootcamp meta-context
 
 - **Cohort size**: ~75,000 signed up; ~10,000–13,000 in Slack community.
 - **Format**: 8-week live training (Tuesdays 1pm EST class + Thursdays 1pm EST coaching). Recordings posted within 24 hours.
