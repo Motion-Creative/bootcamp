@@ -9,19 +9,28 @@ The complete bootcamp — every Tuesday class, every Thursday coaching call — 
 
 ## Install
 
-**Easiest — paste this into Claude Code:**
+### claude.ai (web / desktop app)
+
+1. Go to the [latest release](https://github.com/Motion-Creative/bootcamp/releases/latest) and download **`motion-bootcamp.skill`** (lessons only, ~80K tokens, recommended) or **`motion-bootcamp-full.skill`** (lessons + full verbatim transcripts, much larger).
+2. In claude.ai, go to **Settings → Capabilities → Skills** and upload the `.skill` file.
+
+Done. Ask Claude anything bootcamp-related and the skill activates automatically.
+
+### Claude Code (terminal)
+
+**Paste this into Claude Code:**
 
 > Install this as a skill: `https://github.com/Motion-Creative/bootcamp`
 
-Claude will clone the repo into `~/.claude/skills/motion-bootcamp/` and the skill will be available in every future session.
-
-**Manual:**
+Or do it directly:
 
 ```bash
 git clone https://github.com/Motion-Creative/bootcamp.git ~/.claude/skills/motion-bootcamp
 ```
 
-**Other agents (Cursor, Runneth, anything markdown-aware):** clone anywhere and point your agent at the folder. `index.md` is the router.
+### Other agents (Cursor, Runneth, anything markdown-aware)
+
+Clone anywhere and point your agent at the folder. `references/index.md` is the router.
 
 ```bash
 git clone https://github.com/Motion-Creative/bootcamp.git
@@ -43,14 +52,16 @@ The skill activates automatically when your question matches bootcamp content. C
 
 ```
 bootcamp/
-├── SKILL.md              ← skill manifest (read by Claude)
-├── index.md              ← cheat sheet — Claude loads this first
-├── week-01/
-│   ├── tuesday-evan-what-is-creative-strategy.md       ← lesson (~5–7K tokens)
-│   ├── tuesday-evan-what-is-creative-strategy.full.md  ← reference (~25–100K tokens)
-│   ├── thursday-coaching-hook-writing.md
-│   └── thursday-coaching-hook-writing.full.md
-├── week-02/  …  week-07/
+├── SKILL.md                  ← skill manifest (read by Claude)
+├── README.md
+└── references/
+    ├── index.md              ← cheat sheet — Claude loads this first
+    ├── week-01/
+    │   ├── tuesday-evan-what-is-creative-strategy.md       ← lesson (~5–7K tokens)
+    │   ├── tuesday-evan-what-is-creative-strategy.full.md  ← reference (~25–100K tokens)
+    │   ├── thursday-coaching-hook-writing.md
+    │   └── thursday-coaching-hook-writing.full.md
+    └── week-02/  …  week-07/
 ```
 
 Every session has two files:

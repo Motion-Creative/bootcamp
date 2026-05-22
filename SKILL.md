@@ -7,24 +7,30 @@ description: Answers questions about the Motion 2026 Creative Strategy Bootcamp 
 
 This skill gives you a structured library of the **Motion 2026 Creative Strategy Bootcamp** — 13 sessions across weeks 1–7 of the 8-week curriculum, with both compressed lesson files and verbatim transcript/slide/ad references.
 
+## Important: all files are bundled inside this skill
+
+Every file referenced below is included in this skill's `references/` folder. **Read them as local files via your file-reading tool. Do not fetch them from GitHub, raw.githubusercontent.com, or any URL. Do not run a web search for them.** If you cannot read a referenced file, say so directly — do not try to substitute a URL fetch.
+
 ## File layout
 
 ```
 motion-bootcamp/
-├── index.md                                              ← router, load first
-└── week-01/ … week-07/
-    ├── <session>.md          ← lesson (~5–7K tokens)    ← open by default
-    └── <session>.full.md     ← reference (25–100K tokens) ← open only for verbatim
+├── SKILL.md                                              ← this file
+└── references/
+    ├── index.md                                          ← router, load first
+    └── week-01/ … week-07/
+        ├── <session>.md          ← lesson (~5–7K tokens)    ← open by default
+        └── <session>.full.md     ← reference (25–100K tokens) ← open only for verbatim
 ```
 
 Every session has two files:
 
 - **`<session>.md` (lesson)** — frontmatter, summary, chapters, frameworks with full taxonomies, claims, tactics, anti-patterns, named entities, key quotes, time-bound claims, homework, cross-week refs. Coaching sessions also include student questions answered, ads critiqued live, and live worked examples. Answers ~80% of bootcamp questions.
-- **`<session>.full.md` (reference)** — verbatim ads registry, verbatim slides registry, full speaker-tagged transcript with inline `[VISUAL: …]` annotations. Open only when the user wants an exact quote, a specific slide, or to cite a moment by timestamp.
+- **`<session>.full.md` (reference)** — verbatim ads registry, verbatim slides registry, full speaker-tagged transcript with inline `[VISUAL: …]` annotations. Open only when the user wants an exact quote, a specific slide, or to cite a moment by timestamp. (Note: the lessons-only bundle does not include `.full.md` files — if one is missing, fall back to the lesson `.md`.)
 
 ## How to use this skill
 
-1. **Always load `index.md` first.** It is the router and contains:
+1. **Always load `references/index.md` first.** It is the router and contains:
    - A 1-paragraph overview per week
    - A card per session (instructor, frameworks, distinctive content, "what to open this file for")
    - A topic index (`hooks → which sessions`, `Andromeda → which sessions`, etc.)
@@ -32,7 +38,7 @@ Every session has two files:
    - A framework index (every named framework → canonical home session)
    - A "If a user asks…" routing table mapping ~35 likely questions → which file to open first
 
-2. **Open the lesson `.md`** for the relevant session. This handles most questions on its own.
+2. **Open the lesson `.md`** for the relevant session, e.g. `references/week-02/tuesday-sarah-levinger-research.md`. This handles most questions on its own.
 
 3. **Only open `.full.md` when you need verbatim wording, exact slide content, or a timestamped citation.** Reference files are large (25–100K tokens each) — do not load them speculatively.
 
@@ -46,7 +52,7 @@ Every session has two files:
 
 ## What to do when uncertain
 
-- If the user's question is bootcamp-adjacent but you can't tell which session it belongs to, read `index.md` and use its topic index and "If a user asks…" routing table.
-- If a framework is mentioned by name (e.g., "T-E-E-P", "Three Realities"), the framework index in `index.md` names the canonical home session.
-- If a speaker is mentioned, the speaker index in `index.md` lists every session they appeared in.
-- If the user wants a verbatim quote and the lesson file doesn't have it, open the matching `.full.md` and search the transcript.
+- If the user's question is bootcamp-adjacent but you can't tell which session it belongs to, read `references/index.md` and use its topic index and "If a user asks…" routing table.
+- If a framework is mentioned by name (e.g., "T-E-E-P", "Three Realities"), the framework index in `references/index.md` names the canonical home session.
+- If a speaker is mentioned, the speaker index in `references/index.md` lists every session they appeared in.
+- If the user wants a verbatim quote and the lesson file doesn't have it, open the matching `.full.md` (if present in this bundle) and search the transcript.
